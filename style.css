@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.but {
+    border: 1px solid hsla(0,0%,100%,.2);
+    background-color: #000;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius: 30px;
+    transition: border-color .3s;
+}
+
+.but:hover {
+    border: 1px solid hsla(0,0%,100%,.4);
+    background-color: #111;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius: 30px;
+    transition: border-color .3s;
+}
+
+.but-text {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.but-text li a {
+  display: flex;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  color: white;
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.but-text li a span {
+  position: relative;
+  transition: 0.3s;
+}
+
+.but-text li a span::before {
+  position: absolute;
+  content: attr(data-text);
+  transform: translateY(120%);
+}
+
+.but-text li a:hover span {
+  transform: translateY(-120%);
+}
+
+
+
